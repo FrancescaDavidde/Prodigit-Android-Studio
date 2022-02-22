@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reservation"
+    app:startDestination="@id/newReservationFragment">
+
+    <fragment
+        android:id="@+id/newReservationFragment"
+        android:name="com.example.prodigit.ui.newreservation.NewReservationFragment"
+        android:label="New Reservation"
+        tools:layout="@layout/fragment_newreservation">
+        <action
+            android:id="@+id/action_newReservationFragment_to_chooseSeatFragment"
+            app:destination="@id/chooseSeat" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseSeat"
+        android:name="com.example.prodigit.ui.chooseseat.ChooseSeatFragment"
+        android:label="Choose Seat"
+        tools:layout="@layout/choose_seat_fragment">
+        <action
+            android:id="@+id/action_chooseSeat_to_declarationLiability"
+            app:destination="@id/declarationLiability" />
+    </fragment>
+    <fragment
+        android:id="@+id/declarationLiability"
+        android:name="com.example.prodigit.ui.chooseseat.DeclarationLiability"
+        android:label="Declaration of Liability"
+        tools:layout="@layout/fragment_declaration_liability" />
+</navigation>

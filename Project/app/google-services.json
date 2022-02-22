@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "89549313858",
+    "firebase_url": "https://prodigit-411e3-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "prodigit-411e3",
+    "storage_bucket": "prodigit-411e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89549313858:android:dbf62bc7c0b3cbbf03dadb",
+        "android_client_info": {
+          "package_name": "com.example.prodigit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89549313858-ueb437m8go4h9als357i3gn2u045k545.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prodigit",
+            "certificate_hash": "a9b5256ac9526db6c1620f4a66df4bdbfd05c6e3"
+          }
+        },
+        {
+          "client_id": "89549313858-tdt72trcf3fa7e27rq9fsvglct8cdq7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_KPFsTLi6vYgkaRqTtS0DivzYjm8-L_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89549313858-tdt72trcf3fa7e27rq9fsvglct8cdq7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

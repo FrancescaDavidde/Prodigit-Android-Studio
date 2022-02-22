@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myreservation"
+    app:startDestination="@+id/myreservation">
+
+    <fragment
+        android:id="@+id/myreservation"
+        android:name="com.example.prodigit.ui.myreservation.MyReservationFragment"
+        android:label="@string/title_my_reservation"
+        tools:layout="@layout/fragment_myreservation" >
+    </fragment>
+
+</navigation>

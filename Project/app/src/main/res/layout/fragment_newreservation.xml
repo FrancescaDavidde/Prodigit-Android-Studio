@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prodigit.ui.newreservation.NewReservationFragment">
+
+        <!--
+        <Spinner
+            android:id="@+id/spinner_name"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:minHeight="48dp"
+            android:background="@drawable/spinner_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_building_name"
+            tools:ignore="SpeakableTextPresentCheck" />
+        -->
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_conversion_absoluteHeight="0dp"
+                    tools:layout_conversion_absoluteWidth="393dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                        <TextView
+                            android:id="@+id/select_building_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:text="@string/select_building_code"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spinner_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="60dp"
+                            android:background="@drawable/auto_complete_style"
+                            android:completionThreshold="0"
+                            android:dropDownHeight="200dp"
+                            android:importantForAccessibility="no"
+                            android:minHeight="48dp"
+                            android:popupBackground="@drawable/auto_complete_style"
+                            app:layout_constraintBottom_toTopOf="@+id/textNewreservation"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.493"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/select_building_code"
+                            app:layout_constraintVertical_bias="0.0"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/and_or_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/and_or"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/select_building_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_code"
+                            app:layout_constraintVertical_bias="0.068" />
+
+                        <TextView
+                            android:id="@+id/select_building_name"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="72dp"
+                            android:text="@string/select_building_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_code" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spinner_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="60dp"
+                            android:background="@drawable/auto_complete_style"
+                            android:completionThreshold="0"
+                            android:dropDownHeight="100dp"
+                            android:importantForAccessibility="no"
+                            android:minHeight="48dp"
+                            android:popupBackground="@drawable/auto_complete_style"
+                            android:text=""
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.492"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/select_building_name"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/search_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginEnd="100dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="@string/search"
+                            app:backgroundTint="@color/bordeaux_sapienza"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_name"
+                            app:layout_constraintVertical_bias="0.339" />
+
+                        <TextView
+                            android:id="@+id/textNewreservation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            app:layout_constraintEnd_toEndOf="@+id/spinner_name"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

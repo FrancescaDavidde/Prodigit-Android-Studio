@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.prodigit.ui.chooseseat.ChooseSeatFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-36dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/BuildingCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/building_code_seat"
+                    android:textAlignment="center"
+                    android:textColor="@color/bordeaux_sapienza"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/sede_ubicazione"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sede_ubicazione"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:text="@string/building_sede_ubicazione"
+                    android:textAlignment="center"
+                    android:textColor="@color/bordeaux_sapienza"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/InsertRoom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BuildingCode" />
+
+                <TextView
+                    android:id="@+id/InsertRoom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/insert_room"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_room"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sede_ubicazione" />
+
+                <Spinner
+                    android:id="@+id/spinner_room"
+                    style="@android:style/Widget.Spinner.DropDown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginBottom="27dp"
+                    android:background="@drawable/spinner_style"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/InsertDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/InsertRoom"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/InsertDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_date"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_room" />
+
+                <Spinner
+                    android:id="@+id/spinner_date"
+                    style="@android:style/Widget.Spinner.DropDown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="60dp"
+                    android:background="@drawable/spinner_style"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/InsertDate"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/seats_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/seats_available"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.065"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_date" />
+
+                <TextView
+                    android:id="@+id/num_seats_available"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/num_available_seats"
+                    android:textColor="@color/bordeaux_sapienza"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/seats_available"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_date" />
+
+                <CheckBox
+                    android:id="@+id/dichiarazione_greenpass"
+                    style="@android:style/Widget.CompoundButton.CheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/sono_in_possesso_di_un_green_pass_valido"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/dichiarazione_resp"
+                    app:layout_constraintEnd_toStartOf="@+id/go_to_declaration"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seats_available"
+                    app:layout_constraintVertical_bias="0.26" />
+
+                <Button
+                    android:id="@+id/go_to_declaration"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/ic_baseline_help_outline_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toEndOf="@+id/dichiarazione_resp"
+                    app:layout_constraintTop_toBottomOf="@+id/dichiarazione_greenpass" />
+
+                <CheckBox
+                    android:id="@+id/dichiarazione_resp"
+                    style="@android:style/Widget.CompoundButton.CheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/ho_letto_la_dichiarazione_di_responsabilit"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/book_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dichiarazione_greenpass"
+                    app:layout_constraintVertical_bias="0.329" />
+
+                <Button
+                    android:id="@+id/book_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="@string/book"
+                    app:backgroundTint="@color/bordeaux_sapienza"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dichiarazione_resp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/week_table"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:padding="1dp"
+            app:columnCount="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_room"
+            app:rowCount="7">
+
+            <ImageView
+                android:id="@+id/blank"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:importantForAccessibility="no"
+                app:srcCompat="@color/bordeaux_sapienza" />
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/From"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/from"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/To"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/to"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Lunedi"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/lunedi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date1"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from1"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to1"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/Martedi"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/martedi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date2"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from2"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to2"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/Mercoledi"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/mercoledi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date3"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from3"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to3"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/Giovedi"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/giovedi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date4"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from4"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to4"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/Venerdi"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/venerdi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date5"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from5"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to5"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/Sabato"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@color/bordeaux_sapienza"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/sabato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Date6"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/Day6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_from6"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_hour_to6"
+                android:background="@drawable/spinner_style"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </androidx.gridlayout.widget.GridLayout>
+        -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

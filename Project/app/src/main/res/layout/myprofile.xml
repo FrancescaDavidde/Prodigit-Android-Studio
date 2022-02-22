@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_stud"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:layout_marginTop="108dp"
+                android:importantForAccessibility="no"
+                app:srcCompat="@drawable/icon_stud_bordeau" />
+
+            <TextView
+                android:id="@+id/email_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/button_changepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="100dp"
+                android:backgroundTint="@color/blue_sapienza"
+                android:text="Change Password" />
+
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="100dp"
+                android:backgroundTint="@color/blue_sapienza"
+                android:text="@string/logout"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button_remove_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/blue_sapienza"
+                android:text="@string/remove_account" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
